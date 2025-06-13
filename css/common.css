@@ -1,0 +1,212 @@
+/* 기초 셋팅 */
+*{
+    padding:0;
+    margin:0;
+    font-family: paperlogy;
+    box-sizing: border-box;
+}
+ul, li, ol{
+    list-style: none;
+}
+a{
+    color: inherit; 
+    text-decoration:none;
+}
+.clearfix::after{
+    display:block;
+    content:'';
+    clear:both
+}
+
+/* 마우스 커서 */
+* {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat322.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat322.png), auto !important;}
+/* 폰트 셋팅 */
+@font-face {
+    font-family: saemmul;
+    src: url(./fonts/DOSSaemmul.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 100;
+    src: url(./fonts/Paperlogy-1Thin.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 200;
+    src: url(./fonts/Paperlogy-2ExtraLight.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 300;
+    src: url(./fonts/Paperlogy-3Light.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 400;
+    src: url(./fonts/Paperlogy-4Regular.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 500;
+    src: url(./fonts/Paperlogy-5Medium.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 600;
+    src: url(./fonts/Paperlogy-6SemiBold.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 700;
+    src: url(./fonts/Paperlogy-7Bold.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 800;
+    src: url(./fonts/Paperlogy-8ExtraBold.ttf);
+}
+@font-face {
+    font-family: paperlogy;
+    font-weight: 900;
+    src: url(./fonts/Paperlogy-9Black.ttf);
+}
+
+.fo-sae{
+    font-family: saemmul;
+}
+
+/* 공통 요소 */
+#body{padding:25px}
+#wrapper{border:1px solid #313131; border-radius: 20px; /* height:100vh; */ display: flex; flex-direction: column; justify-content: space-between; overflow:hidden;}
+#header{border-bottom:1px solid #313131; display:flex; justify-content:space-between; flex-direction: row; padding:15px 25px; height:75px; align-items:center;}
+#contain{background:url(../img/pattern_default.png); height:100%; background-size:75px}
+#footer{background:#f2f2f2; text-align:center; padding:50px 0; height:115px;}
+#footer p{color:#7a7a7a; font-size:14px; font-weight:600;}
+.fix-layout{padding:0 5%}
+
+/* header 스타일 */
+#header .logo{color:#191919; font-weight:900; font-size:20px}
+#mo-gnb{display:none;}
+#gnb{display:flex; flex-direction: row; justify-content: space-evenly; gap:100px; align-items:center;}
+#gnb li a{font-size:20px; font-weight:600; color:#000; padding-left:45px; display:block; position:relative}
+#gnb li a::before{content:''; display:block; width:32px; height:32px; background:tomato; position:absolute; top:-4px; left:0px;}
+#gnb li:hover a::before{ animation:sayhi 2s infinite; transition:all 2s ease; animation-timing-function:ease;}
+#gnb li:nth-child(1) a::before{background:url(../img/header_ico01.png) no-repeat; background-size:cover;}
+#gnb li:nth-child(2) a::before{background:url(../img/header_ico02.png) no-repeat; background-size:cover;}
+#gnb li:nth-child(3) a::before{background:url(../img/header_ico03.png) no-repeat; background-size:cover;}
+#gnb li a.on{text-decoration: underline;}
+#gnb li .cnt{padding:16px 30px 16px 70px; background:#007cef; font-weight:700; color:#fff; border-radius: 30px;}
+#gnb li .cnt::before{top:12px; left:24px; background:url(../img/header_ico04.png) no-repeat; background-size:cover;}
+@keyframes sayhi{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(45deg);
+    }
+    20%{
+        transform: rotate(-45deg);
+    }
+    30%{
+        transform: rotate(30deg);
+    }
+    40%{
+        transform: rotate(-30deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(-10deg);
+    }
+    70%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+/* 모바일 메뉴 */
+.mo-la{width:100vw; height:100vh; position:fixed; top:0; left:100%; background: #fff; z-index:10; padding:30px 30px 0 30px}
+.menu-open{width:24px; height:24px; background:url(../img/ico_menuopen.png); text-indent:-9999px;display:block; background-size:cover;}
+.mo-la .menu-close{width:24px; height:24px; background:url(../img/ico_menuclose.png); display:block; float:right; background-size:cover; text-indent: -9999px; transition:all .3s ease;}
+.mo-la .menu-close:hover{transform:rotate(90deg); transition:all .3s ease;}
+.mo-la #gnb{display:flex; flex-direction:column; gap:0; align-items:flex-start; margin-top:50px;}
+.mo-la #gnb li{border-bottom:1px solid #e5e5e5; padding-bottom:20px; margin-bottom:20px; width:100%;}
+.mo-la #gnb li:last-child{border-bottom:0;}
+@media all and (max-width:1200px){
+    #footer{height:auto;}
+    nav > #gnb{display:none}
+    #mo-gnb{display:flex;}
+}
+@media all and (max-width:800px){
+    #gnb li a{font-size:16px; padding-left:36px;}
+    #gnb li a::before{width:24px; height:24px; top:-2px;}
+}
+@media all and (max-width:480px){
+    #header .logo{font-size:16px;}
+    #body{padding:10px}
+    #contain{background-size:25px;}
+    #footer{padding:16px 0;}
+    #footer p{font-size:10px;}
+}
+
+
+#tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+    margin-bottom:60px;
+}
+
+#tab li{
+    font-size: 24px;
+    color:#666666;
+    background:#e5e5e5;
+    font-weight: 600;
+    padding: 20px 45px;
+    border-radius: 35px;
+    cursor:pointer;
+    transition:all .3s ease;
+}
+#tab li:hover{
+    background:#248cec;
+    color:#fff;
+    transition:all .3s ease;
+}
+
+#tab li.on{
+    background:#248cec;
+    color:#fff;
+}
+
+@media all and (max-width:768px){
+    #tab{
+        margin-bottom:40px;
+    }
+
+    #tab li{
+        padding:12px 30px;
+        font-size:16px;
+    }
+}
+
+@media all and (max-width:640px){
+    #tab{
+        gap:0;
+        flex-wrap: wrap;
+        margin-bottom:20px;
+        justify-content: flex-start;
+    }
+    #tab li{
+        width:50%;
+        text-align: center;
+        font-size:12px;
+        border-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding:8px;
+    }
+}
