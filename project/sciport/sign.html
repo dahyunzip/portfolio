@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국립부산과학관 안내 서비스</title>
+    
+    <link href="./css/fonts.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $('.end-record').hide();
+        $('.record').click(function(){
+            $(this).hide();
+            $('.end-record').show();
+        });
+        $('.end-record').click(function(){
+            $(this).hide();
+            $('.record').show();
+        });
+    })
+</script>
+<body>
+    <div id="bodyWrap" class="subContents fix-layout page_sign">
+        <header class="btnwrap">
+            <a href="index.html" class="btn-back">뒤로가기</a>
+            <a href="index.html" class="btn-home">HOME</a>
+        </header>
+        <container>
+            <h1 class="top-tit">수어서비스</h1>
+            <p class="sub-tit">수어인식을 터치하여 수어로 얘기해주세요.</p>
+            <div class="camera">
+                <video controls>
+                    <source type="video/mp4" src="./source/sample1.mp4">
+                </video>
+            </div>
+            <a href="javascript:void(0);" class="lbtn record"><i></i>수어 인식</a>
+            <a href="javascript:void(0);" class="lbtn end-record" onclick="location.href='sign_recognizing.html'"><i></i>인식 종료</a>
+        </container>
+        <footer>
+            <div class="blogo"><img src="./img/bottomlogo.png" alt="국립수산과학관 로고"></div>
+        </footer>
+    </div>
+</body>
+</html>

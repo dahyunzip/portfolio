@@ -93,6 +93,7 @@
     color:#007cef;
     font-size: 18px;
     font-weight:500;
+    cursor:pointer;
 }
 .box__list > ul  >li{margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #000}
 .box__list > ul > li:last-child{border-bottom:0}
@@ -777,6 +778,9 @@ span.point{
     .work__list li:nth-child(3n){
         margin-right:4%;
     }
+    .work__list li:nth-child(6n){
+    margin-right:0;
+    }
 
 }
 
@@ -853,6 +857,20 @@ span.point{
     font-weight:500;
     color:#000;
 }
+.projectDetail .detail__cont{
+    text-align: center;
+}
+.projectDetail .detail__cont p{
+    font-size: 20px;
+}
+.imp_ifr{
+    background:#fff;
+    border:1px solid #e5e5e5;
+    width:100vw;
+    height:100vh;
+    max-width:768px;
+    max-height:1440px;
+}
 
 .img-zoom img{
     width:100%;
@@ -882,6 +900,10 @@ span.point{
 @media all and (max-width:768px){
     .projectDetail .title p{font-size:24px;}
     .projectDetail .title .btn-wrap ul{flex-direction: row;}
+    .imp_ifr{
+    max-width:100%;
+    max-height:1000px;
+}
 }
 
 @media all and (max-width:500px){
@@ -1013,3 +1035,4 @@ span.point{
     .contactPage .add dt{margin-bottom:5px}
     .contactPage .add dt, .contactPage .add dd{font-size:16px; width:auto;}
 }
+

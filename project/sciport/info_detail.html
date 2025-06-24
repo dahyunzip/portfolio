@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국립부산과학관 안내 서비스</title>
+    
+    <link href="./css/fonts.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $('.end-record').hide();
+        $('.record').click(function(){
+            $(this).hide();
+            $('.end-record').show();
+        });
+        $('.end-record').click(function(){
+            $(this).hide();
+            $('.record').show();
+        });
+    })
+</script>
+<body>
+    <div id="bodyWrap" class="subContents fix-layout page_info">
+        <header class="btnwrap">
+            <a href="info.html" class="btn-back">뒤로가기</a>
+            <a href="index.html" class="btn-home">HOME</a>
+        </header>
+        <container>
+            <h1 class="top-tit">배를 탄 코끼리</h1>
+            <div class="image">
+                <img src="./img/info_detail01.jpg" alt="배를 탄 코끼리 이미지">
+            </div>
+            <p class="stit">전시설명</p>
+            <div class="detail_bx">
+                <p class="normal">배를 탄 코끼리 전시설명입니다.배를 탄 코끼리 전시설명입니다.배를 탄 코끼리 전시설명입니다.배를 탄 코끼리 전시설명입니다.</p>
+                <p class="normal">배를 탄 코끼리 전시설명입니다.배를 탄 코끼리 전시설명입니다.배를 탄 코끼리 전시설명입니다.배를 탄 코끼리 전시설명입니다.</p>
+            </div>
+            <div class="info_wrap">
+                <dl class="explain clearfix">
+                    <dt>위치</dt>
+                    <dd>가나다라마바사가나다라마바사</dd>
+                </dl>
+                <dl class="explain clearfix">
+                    <dt>기간</dt>
+                    <dd>가나다라마바사가나다라마바사</dd>
+                </dl>
+            </div>
+        </container>
+        <footer>
+            <div class="blogo"><img src="./img/bottomlogo.png" alt="국립수산과학관 로고"></div>
+        </footer>
+    </div>
+</body>
+</html>

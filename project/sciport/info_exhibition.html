@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국립부산과학관 안내 서비스</title>
+    
+    <link href="./css/fonts.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<script>
+    $(document).ready(function(){
+        $("#tab-cont > div").hide().eq(0).show();
+        $("#tab > li").click(function() {
+            var idx = $(this).index();
+            $("#tab > li").removeClass("on");
+            $("#tab > li").eq(idx).addClass("on");
+            $("#tab-cont > div").hide();
+            $("#tab-cont > div").eq(idx).show();
+        })
+    })
+</script>
+<body>
+    <div id="bodyWrap" class="subContents fix-layout page_info">
+        <header class="btnwrap">
+            <a href="info.html" class="btn-back">뒤로가기</a>
+            <a href="index.html" class="btn-home">HOME</a>
+        </header>
+        <container>
+            <h1 class="top-tit">전시관 안내</h1>
+            <ul id="tab">
+                <li class="on">1F</li>
+                <li>2F</li>
+                <li>3F</li>
+                <li>4F</li>
+            </ul>
+            <div id="tab-cont">
+                <div class="image">
+                    <img src="./img/facility_img1F.jpg" alt="1층 전시관 안내">
+                </div>
+                <div class="image">
+                    <img src="./img/facility_img2F.jpg" alt="2층 전시관 안내">
+                </div>
+                <div class="image">
+                    <img src="./img/facility_img3F.jpg" alt="3층 전시관 안내">
+                </div>
+                <div class="image">
+                    <img src="./img/facility_img4F.jpg" alt="4층 전시관 안내">
+                </div>
+            </div>
+        </container>
+        <footer>
+            <div class="blogo"><img src="./img/bottomlogo.png" alt="국립수산과학관 로고"></div>
+        </footer>
+    </div>
+</body>
+</html>
