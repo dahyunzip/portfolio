@@ -222,7 +222,7 @@
     }
 }
 .btn-wrap button{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: #000;
     padding:24px 100px 24px 36px;
@@ -819,7 +819,7 @@ span.point{
 }
 
 .projectDetail .title p{
-    font-size:50px;
+    font-size:40px;
     font-weight:800;
     color:#000;
 }
@@ -842,14 +842,14 @@ span.point{
     flex-wrap: wrap;
 }
 .projectDetail .detail__list dt{
-    font-size:24px;
+    font-size:20px;
     color:#898989;
     font-weight:800;
     width:125px;
 }
 .projectDetail .detail__list dd{
     width:calc(100% - 125px);
-    font-size:24px;
+    font-size:20px;
     font-weight:500;
     color:#000;
 }

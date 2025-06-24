@@ -17,9 +17,12 @@ a{
     content:'';
     clear:both
 }
+button{
+    cursor: pointer;
+}
 
 /* 마우스 커서 */
-* {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat322.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat322.png), auto !important;}
+/* * {cursor: url(https://cur.cursors-4u.net/nature/nat-4/nat322.ani), url(https://cur.cursors-4u.net/nature/nat-4/nat322.png), auto !important;} */
 /* 폰트 셋팅 */
 @font-face {
     font-family: saemmul;
@@ -209,4 +212,27 @@ a{
         border-bottom-right-radius: 0;
         padding:8px;
     }
+}
+
+/* 최상단으로 이동 */
+#scroll_top{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: url(../img/ico_top.png) no-repeat center -2px,#007cef;
+    box-shadow: 0px -5px 25px rgb(75 117 153 / 30%);
+    border-radius: 50%;
+    transition: all .3s ease;
+    border:0;
+    z-index: 5;
+}
+#scroll_top:focus, #scroll_top:active{
+    border:0;
+}
+#scroll_top:hover{
+    background: url(../img/ico_top_on.png) no-repeat center -2px,#fff;
+    transition: all .3s ease;
 }

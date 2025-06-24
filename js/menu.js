@@ -35,4 +35,22 @@ $(document).ready(function(){
 		tabCont.css("display","none");
 		tabCont.eq(index).css("display","block");
 	});
-})
+
+    
+    //aos
+    AOS.init();
+
+    
+    //최상단으로 이동
+    $('#scroll_top').click(function(){
+        $('html, body').animate({scrollTop : 0}, 400);
+        return false;
+    });
+});
+$(window).scroll(function(){
+    if($(this).scrollTop() > 100){
+        $('#scroll_top').fadeIn();
+    }else{
+        $('#scroll_top').fadeOut();
+    }
+});
