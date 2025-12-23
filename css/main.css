@@ -12,8 +12,8 @@
     display:flex; flex-direction: row-reverse; justify-content: space-evenly;
 }
 .mainVisual .mv__title{
-    width:400px; 
-    height:320px;
+    width:500px; 
+    height:350px;
     background: url(../img/title_img.png) no-repeat;
     background-size:cover;
     margin-right:120px;

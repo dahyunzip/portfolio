@@ -160,24 +160,41 @@
 
 .skill__box{
     display: flex;
-    gap:30px;
+    gap:2%;
     justify-content: center;
     flex-wrap: wrap;
 }
 .box__list > ul.skill__box > li{
+    width:49%;
     border-bottom:0;
-    position:relative
+    position:relative;
+    /*cursor:pointer;*/
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    align-items: center;
 }
+
+.box__list > ul.skill__box > li .icon{width:100px;}
+.box__list > ul.skill__box > li .text{width:calc(100% - 120px); padding:24px; background:#fff; box-shadow: 0 0 2px 1px rgba(0,0,0,0.3);}
+.box__list > ul.skill__box > li .text p{line-height:1.5;}
+
+.box__list > ul.skill__box > li img{
+    width:100%; height:auto;
+}
+
 .box__list > ul.skill__box .label{
-    position: absolute;
+    /* position: absolute;
     left:50%;
     transform: translateX(-50%);
     bottom: -20px;
     border-radius: 25px;
     padding: 6px 15px;
     background: #dbdbdb;
-    color: #4f4f4f;
-    font-size:14px;
+    color: #4f4f4f; */
+    font-size:16px;
+    font-weight:700;
+    color:#000;
 }
 .btn-wrap{
     margin-top:70px;
@@ -360,6 +377,7 @@
         align-items: center;
         gap:15px;
     }
+    .box__list > ul.skill__box > li{width:100%;}
 }
 @media all and (max-width:500px){
     .profileDocument{
@@ -438,9 +456,12 @@
     .box__list > ul.box__wrap > li:nth-child(3n){
         margin-right:0%;
     }
+    .box__list > ul >li{margin-bottom:0;}
     .skill__box{
         gap:10px;
     }
+    .box__list > ul.skill__box > li .text{width:calc(100% - 70px); padding:16px; font-size:12px;}
+    .box__list > ul.skill__box > li .icon{width:50px;}
     .box__list > ul.skill__box > li img{
         width:50px; height:auto;
     }
@@ -844,6 +865,9 @@ span.point{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.projectDetail .detail__list dl.w50{
+    width:50%; margin-bottom:10px;
 }
 .projectDetail .detail__list dt{
     font-size:20px;
