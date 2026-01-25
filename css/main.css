@@ -14,10 +14,13 @@
 .mainVisual .mv__title{
     width:500px; 
     height:350px;
-    background: url(../img/title_img.png) no-repeat;
-    background-size:cover;
+    /* background: url(../img/title_img.png) no-repeat;
+    background-size:cover;*/
     margin-right:120px;
+    margin-top:40px;
 }
+.mainVisual .mv__title p{font-size:60px; color:#0074ea; font-weight:800; text-align:center; text-shadow: 0 0 3px rgba(0,0,0,.3);}
+.mainVisual .mv__title span{background:#0074ea; color:#fff; border-radius: 100px; padding:20px 30px; display:block;}
 .mainVisual .mv__image{
     width:510px;
     height: 730px;
