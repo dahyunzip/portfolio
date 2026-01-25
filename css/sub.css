@@ -67,6 +67,9 @@
 .blog-label > a.velog{
     background:#00c9b8
 }
+.blog-label > a.git{
+    background:#000
+}
 
 .prof__detail{
     width: calc(100% - 410px);
